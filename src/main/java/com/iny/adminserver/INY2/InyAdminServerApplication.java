@@ -1,11 +1,11 @@
 package com.iny.adminserver.INY2;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan(basePackages = "com.iny.adminserver")
 @SpringBootApplication
 public class InyAdminServerApplication {
 

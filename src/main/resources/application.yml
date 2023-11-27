@@ -4,3 +4,22 @@ spring:
       name: test
       password: test
       roles: USER, ADMIN
+  # DB 접속 설정
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-18-183-87-196.ap-northeast-1.compute.amazonaws.com:5432/admindb
+    username: postgres
+    password: 159456a!
+  # JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+# Server Port
+server:
+  port: 9999
